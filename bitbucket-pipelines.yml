@@ -6,7 +6,7 @@ pipelines:
             - step:
                 name: Validate and output plan
                 script:
-                    - terraform init -input=false -backend-config="access_key=$AWS_ACCESS" -backend-config="secret_key=$AWS_SECRET"
+                    - terraform init -input=false -backend-config="access_key=$AWS_ACCESS_KEY_ID" -backend-config="secret_key=$AWS_SECRET_ACCESS_KEY"
                     - terraform validate
                     - terraform plan -out=tfplan -input=false
     branches:
@@ -15,7 +15,7 @@ pipelines:
                 name: Apply plan
                 deployment: production
                 script:
-                    - terraform init -input=false -backend-config="access_key=$AWS_ACCESS" -backend-config="secret_key=$AWS_SECRET"
+                    - terraform init -input=false -backend-config="access_key=$AWS_ACCESS_KEY_ID" -backend-config="secret_key=$AWS_SECRET_ACCESS_KEY"
                     - terraform validate
                     - terraform plan -out=tfplan -input=false
                     - terraform apply -input=false -auto-approve tfplan
