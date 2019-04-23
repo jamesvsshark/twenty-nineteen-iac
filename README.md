@@ -25,3 +25,4 @@ This project goes hand in hand with the meetup/tech talk at the Fall River BIC o
 | simple        | A simple TF module that samples how to create, update and destroy a simple AWS EC2 instance and S3 bucket |
 | starter       | All resources to get our twenty nineteen startup are included in one large Terraform file. We could use some refactoring and our infrastructure is also lacking some key components. |
 | semi-pro      | Refactored some of the TF code. Grouped the Wordpress work into its own module. Added pipeline support to automate the iac build and deployment. |
+| all-star      | Your turn to become a legend. Here are some next steps you can take. Add Route53 routes for your domain, CloudFront Distribution on your static site and a Classic Load Balancer to your EC2 instance. Good luck, Legend! | 
