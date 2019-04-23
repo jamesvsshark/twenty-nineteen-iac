@@ -3,10 +3,6 @@ provider "aws" {
 }
 
 # our s3 bucket to store our TF state file remotely
-resource "aws_s3_bucket" "iac_state" {
-  bucket = "twenty-nineteen-iac"
-}
-
 terraform {
   backend "s3" {
     bucket = "twenty-nineteen-iac"
