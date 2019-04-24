@@ -24,5 +24,5 @@ resource "aws_s3_bucket" "twenty_nineteen_web_app" {
 
 module "wordpress" {
   source = "./modules/startup_wordpress"
-  name   = "twenty-nineteen-wordpress"
+  name   = "twenty-nineteen-wordpress-fr"
 }
